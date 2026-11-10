@@ -2,7 +2,22 @@
 Палитра: фон #f5f7fa, текст #243142, 
 заголовки #17365d, ссылки #0b5cab, акцент #8a2c2c 
 */ 
+:root {
+  --color-primary: #1f5d85;
+  --color-primary-dark: #174766;
+  --color-text: #17212b;
+  --color-muted: #465766;
+  --color-surface: #ffffff;
+  --color-background: #f4f7f9;
+  --color-border: #c9d3dd;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --radius: 0.5rem;
 
+
+}
 html {
   font-size: 16px;
 }
@@ -52,16 +67,18 @@ header {
   gap: 0.5rem;
   margin-block: 1rem;
   padding: 0.75rem;
-  border: 1px solid #9fb3c8;
+  border: 1px solid var(--color-border);
   background-color: #f5f7fa;
   border-radius: 8px;
+  width: min(100% - 2rem, 70rem);
+  height: auto;
 }
 
 .main-nav a {
   color: #0b5cab;
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  border: 1px solid #9fb3c8;
+  border: 1px solid var(--color-border);
   border-radius: 0.35rem;
   text-decoration: none;
 }
@@ -175,7 +192,7 @@ input, select, textarea {
   width: 100%; 
   max-width: 32rem; 
   padding: 0.55rem; 
-  border: 1px solid #7d8d9c; 
+  border: 1px solid var(--color-border); 
 } 
 
 button { 
@@ -198,7 +215,7 @@ input[type="checkbox"] {
 .card {
   display: inline-block;
   padding: 1rem 1.25rem;
-  border: 1px solid #c9d3dd;
+  border: 1px solid var(--color-border);
   border-radius: 1.5rem;
   background-color: #ffffff;
   flex: 1 1 15rem;
@@ -212,7 +229,7 @@ input[type="checkbox"] {
   min-height: 10rem; 
   gap: 0.75rem; 
   padding: 1rem; 
-  border: 1px solid #9fb3c8; 
+  border: 1px solid var(--color-border); 
   align-items: stretch; 
 } 
 
@@ -335,7 +352,7 @@ input[type="checkbox"] {
 
 .catalog-grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 15rem), 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100%, 15rem));
   gap: 1rem;
 }
 
@@ -416,7 +433,7 @@ input[type="checkbox"] {
 
 .page-tools {
   position: sticky;
-  top: 125px;
+  top: 180px;
   z-index: 10;
   display: flex;
   flex-wrap: wrap;
@@ -458,7 +475,9 @@ gap: 1.25rem;
 align-items: center;
 padding-block: 1.5rem;
 }
-
+.request {
+  text-align: center;
+}
 .responsive-hero img {
 width: 100%;
 border-radius: 0.75rem;
@@ -511,4 +530,159 @@ display: grid;
 grid-template-columns: 1fr;
 gap: 1.5rem;
 font-size: 1rem;
+}
+
+.study-form {
+  max-width: 52rem;
+  padding: 1.25rem;
+  border: 1px solid #c9d3dd;
+  border-radius: 0.75rem;
+  background-color: #f8fafc;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.form-field label,
+.form-field legend {
+  font-weight: 700;
+}
+
+.form-field small { color: #465766; }
+.form-field input:not([type="radio"]):not([type="checkbox"]), 
+.form-field select, 
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #718096;
+  border-radius: 0.35rem;
+  color: #17212b;
+  background-color: #ffffff;
+  font: inherit;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.study-form button {
+  min-height:  2.75rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid #1f5d85;
+  border-radius: 0.35rem;
+  color: #ffffff;
+  background-color: #1f5d85;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.study-form .button-secondary {
+  color: #1f5d85;
+  background-color: #ffffff;
+}
+
+
+.study-form button:hover { background-color: #174766; }
+
+.study-form input:focus-visible,
+.study-form select:focus-visible,
+.study-form textarea:focus-visible,
+.study-form button:focus-visible {
+  outline: 3px solid #f2b134;
+  outline-offset: 2px;
+}
+
+.study-form input:disabled,
+.study-form button:disabled {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.study-form input:required:not(:placeholder-shown):invalid {
+  border-color: #a12828;
+  border-width: 2px;
+}
+
+.study-form input:required:not(:placeholder-shown):valid {
+  border-color: #26734d;
+  border-width: 2px;
+}
+
+@media (min-width: 48rem) {
+  .form-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field--wide {
+      grid-column:  1/-1;
+  }
+}
+
+.project-hero {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.project-hero img {
+  width: 100%;
+  max-width: 32rem;
+  border-radius: var(--radius);
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.result-grid article {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+@media (min-width: 48rem) {
+  .project-hero { grid-template-columns: 1.2fr 1fr; }
+}
+
+/* Самостоятельная часть пары 21 */
+
+.top-games {
+  display: grid;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 14rem));
+}
+
+.games-grid article {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  margin: var(--space-xs);
 }

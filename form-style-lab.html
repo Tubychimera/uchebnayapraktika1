@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="side-header">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="hobby.html">Мои увлечения</a></li>
+                <li><a href="college.html">Мой колледж</a></li>
+                <li><a href="season.html">Мое любимое время года</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="application.html">Заявка</a></li>
+                <li><a href="club.html">Клуб</a></li>
+                <li><a href="styles-check.html">Стили</a></li>
+                <li><a href="flex-lab.html">Лабороторная Flexbox</a></li>
+                <li><a href="grid-lab.html">Лабороторная Grid</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="position-lab.html">Лаборатория Position</a></li>
+                <li><a href="responsive-lab.html">Лаборатория адаптивности</a></li>
+                <li><a href="form-style-lab.html">Заявка на учебный интенсив</a><li></li>
+                <li><a href="project.html">Итог</a></li>
+             </ul>
+         </nav>
+     </header>
+
+     <main class="page-container">
+        <h1>Заявка на учебный интенсив</h1>
+        <p id="form-help">Поля со звёздочкой обязательны.</p>
+        <form class="study-form" action="#" method="post" aria-describedby="form-help">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="student-name">Имя и фамилия *</label>
+              <input id="student-name" name="student-name" type="text" required autocomplete="name">
+            </div>
+      
+            <div class="form-field">
+              <label for="student-email">Электронная почта *</label>
+              <input id="student-email" name="student-email" type="email" required autocomplete="email" placeholder="student@example.ru">
+            </div>
+      
+            <div class="form-field form-field--wide">
+              <label for="course">Направление *</label>
+              <select id="course" name="course" required>
+                <option value="">Выберите направление</option>
+                <option value="html">HTML и CSS</option>
+                <option value="git">Git и GitHub</option>
+                <option value="project">Учебный проект</option>
+              </select>
+            </div>
+      
+            <fieldset class="form-field form-field--wide">
+              <legend>Формат участия</legend>
+              <label class="choice"><input type="radio" name="format" value="class" checked> В аудитории</label>
+              <label class="choice"><input type="radio" name="format" value="online"> Онлайн</label>
+            </fieldset>
+            <fieldset class="form-field form-field--wide">
+                <legend>Уровень подготовки</legend>
+              <label class="choice"><input type="radio" name="level" value="beginner" checked> Слабый</label>
+              <label class="choice"><input type="radio" name="level" value="intermediate"> Средний</label>
+              <label class="choice"><input type="radio" name="level" value="advanced"> Сильнейший</label>
+            </fieldset>
+      
+            <div class="form-field form-field--wide">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" rows="5" maxlength="500" required></textarea>
+            </div>
+          </div>
+      
+          <label class="choice agreement">
+            <input type="checkbox" name="agreement" required>
+            Я проверил введённые данные *
+          </label>
+      
+          <div class="form-actions">
+            <button type="submit">Отправить заявку</button>
+            <button type="reset" class="button-secondary">Очистить</button>
+          </div>
+        </form>
+      </main>
+
+      <footer class="page-footer"><p>Учебная практика УП.09</p></footer>
+      </body>
+      </html>
+      
+
