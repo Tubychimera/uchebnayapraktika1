@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Максим Алексеев",
+      "email": "freaks@freaks.gmail.com",
+      "phone": "+7 (96) 117-62-44",
+      "address": { "city": "Чебоксары" }
+    },
+    {
+      "id": 2,
+      "name": "Стасянчик",
+      "email": "stasyan4ik@gmail.com",
+      "phone": "+7 (960) 31-166-12",
+      "address": { "city": "Новое Тинчурино" }
+    },
+    {
+      "id": 3,
+      "name": "Иванов Александр",
+      "email": "Sanek3004@mail.com",
+      "phone": "+7 (969) 777-42-42",
+      "address": { "city": "Красноармейское" }
+    }
+  ]

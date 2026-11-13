@@ -1,0 +1,22 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Клавиатура вутинг",
+        "description": "Клавиаутар внутри и пару кейкапов в подарок",
+        "price": 40,
+        "rating": 9,
+        "category": "clava",
+        "thumbnail": "https://wooting.io/"
+      },
+      {
+        "id": 2,
+        "title": "Аирподсы",
+        "description": "для прослушки качественного фонка",
+        "price": 100,
+        "rating": 10,
+        "category": "AirPods",
+        "thumbnail": "https://www.apple.com/airpods/"
+      }
+    ]
+  }

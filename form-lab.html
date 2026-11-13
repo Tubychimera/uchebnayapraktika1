@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка форм</title>
+    <script src="js/form.js" defer></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ffffff;
+            color: #222222;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 20px;
+        }
+        body.dark {
+            background-color: pink;
+            color: #e8e6e3;
+        }
+        .error {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        form div, section {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Регистрация студента</h1>
+
+    <form id="registration-form" novalidate>
+        <div>
+            <label for="student-name">Имя</label><br>
+            <input type="text" id="student-name">
+        </div>
+
+        <div>
+            <label for="student-email">Email</label><br>
+            <input type="email" id="student-email">
+        </div>
+
+        <div>
+            <label for="student-password">Пароль</label><br>
+            <input type="password" id="student-password">
+        </div>
+        <div>
+            <label for="student-group">Группа</label><br>
+        <input type="text" id="student-group" placeholder="">
+        </div>
+
+        <button type="submit">Проверить данные</button>
+    </form>
+
+    <p id="result"></p>
+
+    <hr>
+
+    <h2>Настройки пользователя</h2>
+    <div>
+        <button id="save-name">Сохранить имя</button>
+        <button id="show-name">Показать имя</button>
+        <button id="delete-name">Удалить имя</button>
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button id="save-group">Сохранить группу</button>
+        <button id="show-group">Показать группу</button>
+        <button id="delete-group">Удалить группу</button>
+    </div>
+
+    <p id="saved-result"></p>
+
+    <hr>
+
+    <h2>Тема оформления</h2>
+    <button id="theme-btn">Переключить тему</button>
+    <p id="theme-status"></p>
+
+    <hr>
+
+    <h2>Мои настройки</h2>
+    <div>
+        <label for="fav-lang">Любимый язык программирования Стасича:</label><br>
+        <input type="text" id="fav-lang" placeholder="JavaScript, Python...">
+    </div>
+    <div>
+        <button id="save-lang">Сохранить</button>
+        <button id="load-lang">Загрузить</button>
+        <button id="clear-lang">Очистить</button>
+    </div>
+    <p id="lang-result"></p>
+
+</body>
+</html>
