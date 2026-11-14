@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Практика jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-lab.js" defer></script>
+</head>
+<style>
+    body {
+        font-family:  Arial, sans-serif;
+        max-width: 650px;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    section {
+        border: 1px solid #cccccc;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    button, input {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    #info-box {
+        background: lightblue;
+        padding: 15px;
+    }
+    #course-box{
+        background-color: rgb(178, 224, 178);
+        padding: 15px;
+    }
+    #course-box {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+    }
+    .card {
+        border: 1px solid #aaa;
+        padding: 10px;
+        margin: 10px 0;
+    }
+</style>
+<body>
+
+    <h1 id="title">Изучаем jQuery</h1>
+
+    <section>
+        <h2>Задача 1. Изменение текста</h2>
+        <p id="message">Исходный текст</p>
+        <button id="change-btn">Изменить текст</button>
+    </section>
+
+    <section>
+        <h2>Задача 2. Скрытие блока</h2>
+        <div id="info-box">Этот блок можно скрывать.</div>
+        <button id="hide-btn">Скрыть</button>
+        <button id="show-btn">Показать</button>
+        <button id="switch-btn">Переключить</button>
+    </section>
+
+    <section>
+        <h2>Задача 3. Приветствие</h2>
+        <input id="name-input" placeholder="Введите имя">
+        <button id="hello-btn">Поздороваться</button>
+        <p id="hello-result"></p>
+    </section>
+
+    <section>
+        <h2>Задача 4. AJAX</h2>
+        <button id="load-btn">Загрузить данные</button>
+        <div id="users"></div>
+    </section>
+
+    <section>
+        <h2>Самостоятельное задание. Информация о курсе</h2>
+        <div id="course-box">
+            <h3>Информация о курсе</h3>
+            <p>Изучаемые дисциплины</p>
+            <ul>
+                <li>HTML</li>
+                <li>GIT</li>
+                <li>CSS</li>
+            </ul>
+            <p>Группа: ИС-1-25</p>
+            <p>Студент: Илья Игнатьев</p>
+        </div>
+        <button id="toggleC-btn">Показать/скрыть</button>
+    </section>
+</body>
+</html>
